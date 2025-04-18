@@ -11,10 +11,10 @@ export class HttpServiceService {
 
   token = '';
   form = {
-  message: '',
-  error: false
+    message: '',
+    error: false
   };
- 
+
 
   userparams = {
     url: '',
@@ -25,7 +25,7 @@ export class HttpServiceService {
 
   setToken(token) {
     this.token = localStorage.getItem('token');
-  //  console.log(this.token + '----> inside setToken');
+    //  console.log(this.token + '----> inside setToken');
   }
 
   getToken() {
@@ -39,23 +39,23 @@ export class HttpServiceService {
   isLogout() {
     let JSESSIONID = localStorage.getItem('fname');
 
-    if ((JSESSIONID == "null" || JSESSIONID == null)&& (this.router.url != "/login"
-    && this.router.url != "/Auth"
-    && this.router.url != "/logout" 
-    && this.router.url != "/forgotpassword" 
-    && this.router.url != "/signup"
-    && this.router.url != "/login/true" 
+    if ((JSESSIONID == "null" || JSESSIONID == null) && (this.router.url != "/login"
+      && this.router.url != "/Auth"
+      && this.router.url != "/logout"
+      && this.router.url != "/forgotpassword"
+      && this.router.url != "/signup"
+      && this.router.url != "/login/true"
     )) {
       this.form.message = "Your Session has been Expired! Please Re-Login";
       this.form.error = true;
       this.userparams.url = this.router.url;// to navigate the URI request.
       this.router.navigateByUrl("/login");
       console.log("Amit Bansal");
-                                                                 
-    return true;
-      } else {
-    return false;
-      } 
+
+      return true;
+    } else {
+      return false;
+    }
   }
 
 
@@ -82,7 +82,7 @@ export class HttpServiceService {
 
     }, error => {
       console.log('ORS Error--', error);
-    });``
+    }); ``
   }
 
 

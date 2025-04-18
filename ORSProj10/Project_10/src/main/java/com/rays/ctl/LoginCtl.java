@@ -7,15 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
-import org.apache.tomcat.util.bcel.classfile.EnumElementValue;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.DisabledException;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,12 +25,12 @@ import com.rays.common.ORSResponse;
 import com.rays.common.UserContext;
 import com.rays.common.attachment.AttachmentDTO;
 import com.rays.common.attachment.AttachmentServiceInt;
-import com.rays.config.JwtTokenUtil;
+import com.rays.config.JWTUtil;
 import com.rays.dto.UserDTO;
 import com.rays.form.LoginForm;
 import com.rays.form.UserForm;
 import com.rays.form.UserRegistrationForm;
-
+import com.rays.service.JWTUserDetailsService;
 import com.rays.service.UserServiceInt;
 
 /**
@@ -59,13 +52,8 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 	 */
 
 	@Autowired
-	private AuthenticationManager authenticationManager;
+	private JWTUtil jwtUtil;
 
-	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
-
-	@Autowired
-	private UserDetailsService jwtService;
 
 	@Autowired
 	AttachmentServiceInt attachmentService;
@@ -121,10 +109,7 @@ public class LoginCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 			/* System.out.println("jsessionid " + session.getId()); */
 			System.out.println("Before calling userDetail authenticate");
 
-			final UserDetails userDetails = jwtService.loadUserByUsername(form.getLoginId());
-
-			final String  
-			token = jwtTokenUtil.generateToken(userDetails);
+			final String token = jwtUtil.generateToken(dto.getLoginId());
 
 			res.addResult("token", token);
 			return res;

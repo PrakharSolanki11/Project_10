@@ -1,6 +1,6 @@
 package com.rays.common;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest; 
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.rays.config.JwtTokenUtil;
-import com.rays.service.JwtUserDetailsService;
+import com.rays.config.JWTUtil;
+import com.rays.service.JWTUserDetailsService;
 
 import io.jsonwebtoken.ExpiredJwtException;
 
@@ -26,10 +26,10 @@ import io.jsonwebtoken.ExpiredJwtException;
 @Component
 public class FrontCtl extends HandlerInterceptorAdapter {
 	@Autowired
-	private JwtUserDetailsService jwtUserDetailsService;
+	private JWTUserDetailsService jwtUserDetailsService;
 
 	@Autowired
-	private JwtTokenUtil jwtTokenUtil;
+	private JWTUtil jwtUtil;
 	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -89,7 +89,7 @@ public class FrontCtl extends HandlerInterceptorAdapter {
 			System.out.println("Inside token != null");
 			jwtToken = requestTokenHeader.substring(7);
 			try {
-				username = jwtTokenUtil.getUsernameFromToken(jwtToken);
+				username = jwtUtil.extractUsername(jwtToken);
 				System.out.println(username+" user-------------");
 			} catch (IllegalArgumentException e) {
 				System.out.println("Unable to get JWT Token");
@@ -107,7 +107,7 @@ public class FrontCtl extends HandlerInterceptorAdapter {
 			UserDetails userDetails = this.jwtUserDetailsService.loadUserByUsername(username);
 
 			// if token is valid configure Spring Security to manually set authentication
-			if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {
+			if (jwtUtil.validateToken(jwtToken)) {
 
 				UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
 						userDetails, null, userDetails.getAuthorities());

@@ -27,7 +27,7 @@ export class ForgotPasswordComponent implements OnInit {
   }
 
 
-  validate(){
+  validate() {
     let flag = true;
     flag = flag && this.dataValidator.isNotNull(this.form.loginId);
     return flag;
@@ -41,25 +41,25 @@ export class ForgotPasswordComponent implements OnInit {
 
   submit() {
     var _self = this;
-    this.httpService.get(_self.endpoint + "/fp/"+ this.form.loginId ,function (res) {  
+    this.httpService.get(_self.endpoint + "/fp/" + this.form.loginId, function (res) {
 
       console.log('MyResponse', res);
 
       _self.form.message = '';
       _self.inputerror = {};
-          console.log(res.result.message+'------>msg');
+      console.log(res.result.message + '------>msg');
       if (res.result.message) {
         _self.form.message = res.result.message;
-        console.log(_self.form.message+'-------> msg in sucess');
-      
+        console.log(_self.form.message + '-------> msg in sucess');
+
       }
 
       _self.form.error = !res.success;
       console.log(_self.form.error + '-----------> msg in self.form.error in res');
 
       if (_self.form.error && res.result.inputerror) {
-          _self.inputerror = res.result.inputerror;
-          console.log(_self.inputerror + '-----------> msg in self.form.error');
+        _self.inputerror = res.result.inputerror;
+        console.log(_self.inputerror + '-----------> msg in self.form.error');
       }
     });
   }

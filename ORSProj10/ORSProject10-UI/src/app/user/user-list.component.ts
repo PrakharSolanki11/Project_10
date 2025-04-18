@@ -14,28 +14,28 @@ export class UserListComponent extends BaseListCtl {
   imageToShow: any;
   myKey = "";
 
-createImageFromBlob(image: Blob) {
-   let reader = new FileReader();
-   reader.addEventListener("load", () => {
+  createImageFromBlob(image: Blob) {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
       this.imageToShow = reader.result;
-   
-   }, false);
 
-   if (image) {
+    }, false);
+
+    if (image) {
       reader.readAsDataURL(image);
-   }
-}
+    }
+  }
 
   public form = {
 
     error: false, //error 
     message: null, //error or success message
     preload: [], // preload data
-    data: { id: null}, //form data
+    data: { id: null }, //form data
     inputerror: {}, // form input error messages
     searchParams: {}, //search form
     searchMessage: null, //search result message
-    list: [ ], // search list 
+    list: [], // search list 
     pageNo: 0
   };
 
@@ -56,12 +56,12 @@ createImageFromBlob(image: Blob) {
     //Make a call to Sprinf Boot to get the Image Bytes.
     this.form.data.id = id;
     console.log(this.form.data.id);
-    
-    this.httpClient.get('http://localhost:8080/User/profilePic/'+this.form.data.id, { responseType: 'blob' }).subscribe(data => {
+
+    this.httpClient.get('http://localhost:8080/User/profilePic/' + this.form.data.id, { responseType: 'blob' }).subscribe(data => {
       this.createImageFromBlob(data);
-      this.myKey= this.form.data.id;
+      this.myKey = this.form.data.id;
     }, error => {
-      
+
       console.log(error);
     });
 
@@ -69,4 +69,3 @@ createImageFromBlob(image: Blob) {
 
 
 }
- 

@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { HttpServiceService } from '../http-service.service';
 import { Router } from '@angular/router';
 import { DataValidator } from '../utility/data-validator';
-import {ServiceLocatorService} from '../service-locator.service';
+import { ServiceLocatorService } from '../service-locator.service';
 import { format } from 'url';
 
 
@@ -23,13 +23,13 @@ export class SignUpComponent implements OnInit {
     message: '', //error or success message
     data: { id: null }, //form data
     inputerror: {}, // form input error messages
-    
+
   };
-  
 
-  
 
-  constructor(private serviceLocator:ServiceLocatorService, private httpService: HttpServiceService, private dataValidator: DataValidator, private router: Router) {
+
+
+  constructor(private serviceLocator: ServiceLocatorService, private httpService: HttpServiceService, private dataValidator: DataValidator, private router: Router) {
   }
   validate() {
     return this.validateForm(this.form);
@@ -43,19 +43,19 @@ export class SignUpComponent implements OnInit {
   validateForm(form) {
     let flag = true;
     let validator = this.serviceLocator.dataValidator;
-  
+
     flag = flag && validator.isNotNullObject(form.firstName);
-    
+
     flag = flag && validator.isNotNullObject(form.lastName);
- 
+
     flag = flag && validator.isNotNullObject(form.loginId);
-    
+
     flag = flag && validator.isNotNullObject(form.password);
-    
+
     flag = flag && validator.isNotNullObject(form.phone);
-    
+
     flag = flag && validator.isNotNullObject(form.gender);
-  
+
     flag = flag && validator.isNotNullObject(form.dob);
     return flag;
 
@@ -67,18 +67,17 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  exit(){ 
-   
+  exit() {
     location.reload();
   }
 
-  reset(){
+  reset() {
     this.router.navigate(['/signup']);
   }
 
   submit() {
     var _self = this;
-    this.httpService.post(this.endpoint, this.form.data,function (res) {
+    this.httpService.post(this.endpoint, this.form.data, function (res) {
 
       console.log('MyResponse', res);
 
@@ -91,10 +90,10 @@ export class SignUpComponent implements OnInit {
 
       _self.form.error = !res.success;
       if (_self.form.error && res.result.inputerror) {
-    
+
         _self.form.inputerror = res.result.inputerror;
 
-          
+
       }
 
     });

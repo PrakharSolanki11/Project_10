@@ -17,7 +17,7 @@ export class BaseCtl implements OnInit {
     deleteMany: null,
     preload: null,
     report: null,
-    address:null
+    address: null
   }
 
   initApi(ep) {
@@ -37,7 +37,7 @@ export class BaseCtl implements OnInit {
   /**
    * Form contains preload data, error/sucess message 
    */
-  public form : any= {
+  public form: any = {
 
     error: false, //error 
     message: null, //error or success message
@@ -115,7 +115,7 @@ export class BaseCtl implements OnInit {
   /**
    * Searhs records 
    */
-    search() {
+  search() {
     console.log("search start")
     var _self = this;
     console.log("Search Form", _self.form.searchParams);
@@ -128,7 +128,7 @@ export class BaseCtl implements OnInit {
 
 
         if (_self.form.list.length == 0) {
-          
+
           _self.form.message = "No record found";
           _self.form.error = true;
         }
@@ -176,7 +176,7 @@ export class BaseCtl implements OnInit {
     var _self = this;
     console.log('Inside display method');
     this.serviceLocator.httpService.get(_self.api.get + "/" + _self.form.data.id, function (res) {
-     _self.form.data.id=0;
+      _self.form.data.id = 0;
       if (res.success) {
         _self.populateForm(_self.form.data, res.result.data);
       } else {
@@ -212,7 +212,7 @@ export class BaseCtl implements OnInit {
     //  console.log("form data going to be submit" + this.studentId);
     this.serviceLocator.httpService.post(this.api.save, this.form.data, function (res) {
       _self.form.message = '';
-       _self.form.inputerror = {};
+      _self.form.inputerror = {};
 
       if (res.success) {
         _self.form.message = "Data is saved";

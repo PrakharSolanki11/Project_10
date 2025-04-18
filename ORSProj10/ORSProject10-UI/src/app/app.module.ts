@@ -13,7 +13,7 @@ import { StudentComponent } from './student/student.component';
 import { CollegeComponent } from './college/college.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule,HttpClient , HTTP_INTERCEPTORS} from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { HttpServiceService } from './http-service.service';
 import { LoginComponent } from './login/login.component';
@@ -51,7 +51,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './auth.service';
-import {MyprofileComponent} from './user/myprofile.component';
+import { MyprofileComponent } from './user/myprofile.component';
 
 
 
@@ -80,7 +80,7 @@ export function myHttpLoader(http: HttpClient) {
     MessageListComponent,
     UserComponent,
     UserListComponent,
-  
+
     RoleComponent,
     RoleListComponent,
     CourseComponent,
@@ -101,10 +101,10 @@ export function myHttpLoader(http: HttpClient) {
     SpinnerComponent,
     FooterComponent,
     MyprofileComponent,
-    
-    
-    
-    
+
+
+
+
 
   ],
   imports: [
@@ -112,8 +112,8 @@ export function myHttpLoader(http: HttpClient) {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-          useFactory: myHttpLoader, 
-          deps: [HttpClient]
+        useFactory: myHttpLoader,
+        deps: [HttpClient]
       }
     }),
     AppRoutingModule,
@@ -122,9 +122,9 @@ export function myHttpLoader(http: HttpClient) {
   ],
   providers: [
     {
-    provide: HTTP_INTERCEPTORS,useClass: AuthService , multi: true 
-},
-   HttpServiceService, 
+      provide: HTTP_INTERCEPTORS, useClass: AuthService, multi: true
+    },
+    HttpServiceService,
     DataValidator,
     CookieService
   ],
@@ -132,6 +132,6 @@ export function myHttpLoader(http: HttpClient) {
 })
 
 
-export class AppModule { 
-  
+export class AppModule {
+
 }

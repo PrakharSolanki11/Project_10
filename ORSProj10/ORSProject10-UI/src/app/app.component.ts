@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription, Observable,timer } from 'rxjs';
+import { Subscription, Observable, timer } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 
 
@@ -10,13 +10,13 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent{
- 
-   
+export class AppComponent {
+
+
 
 }
 
 
 
 
- 
+

@@ -15,10 +15,10 @@ export class EndpointServiceService {
   public COLLEGE = this.SERVER_URL + "/College";
   public MARKSHEET = this.SERVER_URL + "/Marksheet";
   public STUDENT = this.SERVER_URL + "/Student";
-  public SUBJECT = this.SERVER_URL+ "/Subject";
-  public FACULTY = this.SERVER_URL+ "/Faculty";
+  public SUBJECT = this.SERVER_URL + "/Subject";
+  public FACULTY = this.SERVER_URL + "/Faculty";
   public COURSE = this.SERVER_URL + "/Course";
-  public TIMETABLE = this.SERVER_URL+ "/TimeTable";
-  public JASPERREPORT = this.SERVER_URL+ "/Jasper";
- 
+  public TIMETABLE = this.SERVER_URL + "/TimeTable";
+  public JASPERREPORT = this.SERVER_URL + "/Jasper";
+
 }

@@ -10,7 +10,7 @@ import { EndpointServiceService } from './endpoint-service.service';
 
 export class ServiceLocatorService {
 
-  
+
   httpService = null;
   dataValidator = null;
   router = null;
@@ -22,7 +22,7 @@ export class ServiceLocatorService {
     this.router = r;
     this.endpoints = ep;
   }
- 
+
   /**
    * get path variable from url
    * 
@@ -40,7 +40,7 @@ export class ServiceLocatorService {
    * 
    * @param page 
    */
-  forward(page){
+  forward(page) {
     this.router.navigateByUrl(page);
   }
 }
