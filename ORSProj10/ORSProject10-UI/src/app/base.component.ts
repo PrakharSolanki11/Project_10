@@ -35,7 +35,7 @@ export class BaseCtl implements OnInit {
   }
 
   /**
-   * Form contains preload data, error/sucess message 
+   * Form contains preload data, error/sucess message ```````````````````````````````````````````````````````````````````````````````````````````````
    */
   public form: any = {
 
@@ -91,6 +91,7 @@ export class BaseCtl implements OnInit {
     this.serviceLocator.httpService.get(_self.api.preload, function (res) {
       if (res.success) {
         _self.form.preload = res.result;
+        
       } else {
         _self.form.error = true;
         _self.form.message = res.result.message;
@@ -119,7 +120,7 @@ export class BaseCtl implements OnInit {
     console.log("search start")
     var _self = this;
     console.log("Search Form", _self.form.searchParams);
-    this.serviceLocator.httpService.post(_self.api.search + "/" + _self.form.pageNo, _self.form.searchParams, function (res) {
+    this.serviceLocator.httpService.post(_self.api.search + "/" + _self.form.pageNo , _self.form.searchParams, function (res) {
 
 
       if (res.success) {

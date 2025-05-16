@@ -34,6 +34,10 @@ import { ChangepasswordComponent } from "./user/changepassword.component";
 import { LoaderComponent } from './loader/loader.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { MyprofileComponent } from './user/myprofile.component';
+import { ProductComponent } from './product/product.component';
+import { ProductListComponent } from './product/product-list.component';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerListComponent } from './customer/customer-list.component';
 
 const routes: Routes = [
     {
@@ -169,6 +173,36 @@ const routes: Routes = [
     {
         path: 'role/:id',
         component: RoleComponent
+
+    },
+    {
+        path: 'customer',
+        component: CustomerComponent
+
+    },
+    {
+        path: 'customerlist',
+        component: CustomerListComponent
+
+    },
+    {
+        path: 'customer/:id',
+        component: CustomerComponent
+
+    },
+    {
+        path: 'product',
+        component: ProductComponent
+
+    },
+    {
+        path: 'productlist',
+        component: ProductListComponent
+
+    },
+    {
+        path: 'product/:id',
+        component: ProductComponent
 
     },
     {

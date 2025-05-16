@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ApplicationExceptionHandlerCtl {
 
 	@ExceptionHandler(value = RuntimeException.class) // custom exception handle
-	public ORSResponse handleRuntimeException(RuntimeException e) {
+	public ORSResponse handleRuntimeException(RuntimeException e){
 		ORSResponse res = new ORSResponse(false);
 		res.addMessage(e.getMessage() + "Prakhar Solanki");
 		return res;

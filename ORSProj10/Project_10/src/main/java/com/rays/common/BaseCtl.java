@@ -49,7 +49,7 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 	protected S baseService;
 
 	@Value("${page.size}")
-	private int pageSize = 0;
+	private int pageSize ;
 
 	/**
 	 * Contains context of logged-in user
@@ -221,10 +221,14 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 
 		ORSResponse res = new ORSResponse(true);
 
-		res.addData(baseService.search(dto, pageNo, pageSize, userContext));
+		List list = baseService.search(dto, pageNo, pageSize, userContext);
+		
+		res.addData(list);
 
 		List nextList = baseService.search(dto, pageNo + 1, pageSize, userContext);
+		
 		res.addResult("nextList", nextList.size());
+		
 		return res;
 	}
 

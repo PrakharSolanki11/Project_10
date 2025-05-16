@@ -19,7 +19,7 @@ import com.rays.exception.DuplicateRecordException;
  * @param <T>
  * @param <D>
  */
-public abstract class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>>  {
+public abstract class BaseServiceImpl<T extends BaseDTO, D extends BaseDAOInt<T>> implements BaseServiceInt<T>  {
 
 	private static Logger log = LoggerFactory.getLogger(BaseServiceImpl.class);
 

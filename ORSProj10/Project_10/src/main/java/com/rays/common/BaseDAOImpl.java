@@ -109,18 +109,14 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 		if (dto.isGroupFilter()) {
 			whereClause.add(builder.equal(qRoot.get("orgId"), dto.getOrgId()));
 		}
-		System.out.println(" isgroup skipped......rahul");
 		cq.where(whereClause.toArray(new Predicate[whereClause.size()]));
 
 		List<Order> orderBys = getOrderByClause(dto, builder, qRoot);
 
-		System.out.println("after getOrder By clause........rahul");
 		cq.orderBy(orderBys.toArray(new Order[orderBys.size()]));
 
-		System.out.println("After order by clause.......rahul ");
 		TypedQuery<T> query = entityManager.createQuery(cq);
-		System.out.println("createCriteria end here---....rahul");
-		return query;
+		return query;	
 
 	}
 
@@ -308,7 +304,7 @@ public abstract class BaseDAOImpl<T extends BaseDTO> implements BaseDAOInt<T> {
 	 * @param qRoot
 	 * @return
 	 */
-	protected List<Order> getOrderByClause(T dto, CriteriaBuilder builder, Root<T> qRoot) {
+	protected List<Order> getOrderByClause(T dto, CriteriaBuilder builder, Root<T> qRoot){
 
 		// Apply Order by clause
 		System.out.println("baseDAO in getOrderByClause.......vipin ");

@@ -84,55 +84,19 @@ export class NavbarComponent implements OnInit {
     }
   }
   goToLink() {
-    window.open('assets/doc/index.html', '_blank');
+     window.open('assets/doc/index.html','_blank');
   }
   logout() {
+   
     var _self = this;
-
     console.log('Logout', this.form);
-
-    // let url = this.servicelocator.endpoints.getEndpoint(this.servicelocator.endpoints.AUTH, "logout");
-
-    // this.servicelocator.httpService.post(url, this.form, function (res, error) {
-
-    //   if (error) {
-    //     alert(error);
-    //     return;
-    //   }
-    //   _self.loginId = "null";
-    //   localStorage.removeItem("token");
-    //   localStorage.removeItem("fname");
-    //   localStorage.removeItem("lname");
-    //   localStorage.removeItem("loginId");
-    //   localStorage.removeItem("role")
-
-
-
-    //   console.log('After logout jsessionid---' +localStorage.getItem("JSESSIONID") + "  logout Pushpendra Singh Kushwah");
-
-
-
-    //   this.form.message = "Logout Successfully";
-    //   console.log(this.form.message);
-    //  _self.servicelocator.router.navigateByUrl('/login/true');
     _self.httpService.get("http://localhost:8084/User/logout", function (res) {
+
       _self.servicelocator.router.navigateByUrl('/login/true');
       if (res.success) {
         localStorage.clear();
         _self.form.message = res.result.message;
-        //     _self.form.list = res.result.data;
-        //     localStorage.removeItem("JSESSIONID");
-        //     _self.servicelocator.router.navigateByUrl('/login');
-        //     if(_self.form.list.length == 0){
-        //       _self.form.message = "No record found";
-        //       _self.form.error = true;
-        //     }
-        //     console.log("List Size",_self.form.list.length );
-        //   }else{
-        //     _self.form.error = false;
-        //     _self.form.message = res.result.message;
-        //   }
-        //   console.log('FORM', _self.form);
+        
       };
 
     });

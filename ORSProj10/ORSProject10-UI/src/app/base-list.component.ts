@@ -66,7 +66,8 @@ export class BaseListCtl extends BaseCtl {
       this.form.pageNo--
       //  this.display(); 
       this.isMasterSel = false;
-      this.searchOperation('previous');
+      // this.searchOperation('previous');
+      this.display();
     }
   }
 
@@ -92,55 +93,6 @@ export class BaseListCtl extends BaseCtl {
 
     }
   }
-
-
-
-
-  //   deleteMany(){
-  //   console.log('delete Many Records starts ');
-  //   console.log('this.form.pageNo ' +this.form.pageNo);  
-  //   var msg : String =''
-  //   this.deleteRecordList.length=0;
-  //   console.log('record deleting start ')
-  //   var isRecordSelected:boolean = false ;
-
-  //     this.checkboxes.forEach((element) => {
-  //       if (element.nativeElement.checked) {
-  //         // console.log('record deleting ' + element.nativeElement.id)
-  //         this.deleteRecordList.push(element.nativeElement.id);
-  //         isRecordSelected = true ;
-  //       }
-  //     });     
-
-  //     if(isRecordSelected){
-  //       console.log('record(s) for delete ' + this.deleteRecordList)        
-  //       this.serviceLocator.httpService.get(this.api.deleteMany + "/" + this.deleteRecordList + '?pageNo=' +this.form.pageNo, function (res) {
-  //         if (res.success) {
-  //             console.log('Inside response success ')
-  //           //  this.deleteMany();
-  //          //  this.form.message = "Data is deleted";
-  //        //  msg ="Data is deleted";
-  //         //  this.form.message = res.result.message;
-
-  //           console.log('deleteMany Calling Callback'); 
-  //           this.search();  
-  //     } else {
-  //       this.form.error = true;
-  //       this.form.message = res.result.message;
-  //     }
-  //   });
-  //   this.form.message = "Data is deleted" ;
-  //   console.log('this.form.pageNo ' +this.form.pageNo);  
-
-  //     }else{
-  //       this.form.message = "Select Atleast One Record";
-  //         this.form.error = true;
-  //     console.log('No record(s) for delete ')
-  //   }
-  //   console.log('delete Many Records ends ');
-  // }
-
-
 
   deleteMany() {
     console.log('delete Many Records starts ');

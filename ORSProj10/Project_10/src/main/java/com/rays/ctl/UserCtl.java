@@ -232,13 +232,10 @@ public class UserCtl extends BaseCtl<UserForm, UserDTO, UserServiceInt> {
 		AttachmentDTO doc = new AttachmentDTO(file);
 
 		doc.setDescription("Profile picture");
-		System.out.println(doc.getDescription() + "description");
 
 		doc.setPath(req.getServletPath());
-		System.out.println(doc.getPath() + "path-----rahul");
 		
 		doc.setUserId(userId);
-		System.out.println(doc.getUserId() + "id-----rahul");
 
 		if (userDTO.getImageId() != null && userDTO.getImageId() > 0) {
 			doc.setId(userDTO.getImageId());

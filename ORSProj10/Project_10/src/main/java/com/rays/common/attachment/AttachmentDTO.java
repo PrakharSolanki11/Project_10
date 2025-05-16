@@ -16,7 +16,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "ST_ATTACHMENT")
-
 public class AttachmentDTO extends AttachmentBaseDTO {
 
 	public AttachmentDTO() {

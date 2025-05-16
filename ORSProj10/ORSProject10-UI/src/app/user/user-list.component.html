@@ -10,8 +10,8 @@
 background: url(assets/files/wall.jpg) no-repeat center center;
 background-attachment: fixed;
 background-size: cover;width:auto;
-  height: 105vh;">
-  <div class="container-fluid padding-bottom: 10px;">
+  height: 119vh;">
+  <div class="container-fluid padding-bottom: 20px;">
 
     <div class="panel panel-primary">
       <div class="panel-heading" style="height: 50px;">
@@ -99,7 +99,7 @@ background-size: cover;width:auto;
             <tbody>
               <tr *ngFor="let m of form.list; let i = index" align="center">
                 <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" [disabled]="m.roleName=='Admin'"
-                    name="list_name" id="{{m.id}}" value="{{isMasterSel}}" />
+                    name="list_name" id="{{m.id}}" value="{{isMasterSel}}"/>
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
 
@@ -143,7 +143,7 @@ background-size: cover;width:auto;
             </tbody>
 
           </table>
-          <table style="width: 100%;">
+          <table style="width: 100%;" class="padding-bottom:30px">
             <tr>
               <td style="width: 50%;">
                 <button (click)="previous()" [disabled]="form.pageNo == 0" class="btn btn-info"> {{'Previous' |

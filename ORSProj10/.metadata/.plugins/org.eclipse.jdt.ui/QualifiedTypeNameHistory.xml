@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.rays.dao.UserDAOInt"/>
+    <fullyQualifiedTypeName name="com.rays.config.JWTUtil"/>
+    <fullyQualifiedTypeName name="com.rays.service.JWTUserDetailsService"/>
+    <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationManager"/>
+    <fullyQualifiedTypeName name="org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder"/>
+</qualifiedTypeNameHistroy>
