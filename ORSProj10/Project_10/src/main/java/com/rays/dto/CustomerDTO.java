@@ -19,7 +19,7 @@ public class CustomerDTO extends BaseDTO {
 	private String location;
 
 	@Column(name = "CONTACT_NUMBER")
-	private long contactNumber;
+	private Long contactNumber;
 
 	@Column(name = "IMPORTANCE", length = 50)
 	private String importance;
@@ -40,11 +40,11 @@ public class CustomerDTO extends BaseDTO {
 		this.location = location;
 	}
 
-	public long getContactNumber() {
+	public Long getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(long contactNumber) {
+	public void setContactNumber(Long contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 
@@ -56,6 +56,10 @@ public class CustomerDTO extends BaseDTO {
 		this.importance = importance;
 	}
 
+	public String getKey() {
+		return id + "";
+	}
+	
 	@Override
 	public String getValue() {
 		// TODO Auto-generated method stub
@@ -82,14 +86,17 @@ public class CustomerDTO extends BaseDTO {
 
 	@Override
 	public LinkedHashMap<String, String> orderBY() {
-		// TODO Auto-generated method stub
-		return null;
+		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+		map.put("clientName", "asc");
+		
+		return map;
 	}
 
 	@Override
 	public LinkedHashMap<String, Object> uniqueKeys() {
-		// TODO Auto-generated method stub
-		return null;
+		LinkedHashMap<String, Object> map = new LinkedHashMap<String, Object>();
+		map.put("clientName", clientName);
+		return map;
 	}
 
 }

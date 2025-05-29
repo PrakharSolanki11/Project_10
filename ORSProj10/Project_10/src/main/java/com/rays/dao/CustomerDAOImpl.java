@@ -1,6 +1,6 @@
 package com.rays.dao;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -21,7 +21,7 @@ public class CustomerDAOImpl extends BaseDAOImpl<CustomerDTO> implements Custome
 
 		if (!isEmptyString(dto.getClientName())) {
 
-			whereCondition.add(builder.like(qRoot.get("client_name"), dto.getClientName() + "%"));
+			whereCondition.add(builder.like(qRoot.get("clientName"), dto.getClientName() + "%"));
 		}
 
 		if (!isEmptyString(dto.getLocation())) {
@@ -29,7 +29,7 @@ public class CustomerDAOImpl extends BaseDAOImpl<CustomerDTO> implements Custome
 			whereCondition.add(builder.like(qRoot.get("location"), dto.getLocation() + "%"));
 		}
 
-		if (!isNotNull(dto.getContactNumber())) {
+		if (isNotNull(dto.getContactNumber())){
 
 			whereCondition.add(builder.equal(qRoot.get("contactNumber"), dto.getContactNumber()));
 		}

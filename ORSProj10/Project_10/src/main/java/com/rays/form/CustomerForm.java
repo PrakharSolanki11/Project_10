@@ -9,7 +9,6 @@ import com.rays.common.BaseForm;
 import com.rays.dto.CustomerDTO;
 import com.rays.dto.UserDTO;
 
-
 public class CustomerForm extends BaseForm {
 
 	@NotEmpty(message = "please enter clientName")
@@ -19,18 +18,50 @@ public class CustomerForm extends BaseForm {
 	private String location;
 
 	@NotNull(message = "please enter contactNumber")
-	private String contactNumber;
+	private Long contactNumber;
 
-	@NotEmpty(message = "please entwer importance")
+	@NotEmpty(message = "please enter importance")
 	private String importance;
 
+	public String getClientName() {
+		return clientName;
+	}
+
+	public void setClientName(String clientName) {
+		this.clientName = clientName;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public Long getContactNumber() {
+		return contactNumber;
+	}
+
+	public void setContactNumber(Long contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+
+	public String getImportance() {
+		return importance;
+	}
+
+	public void setImportance(String importance) {
+		this.importance = importance;
+	}
+
 	@Override
-	public BaseDTO getDto() {
+	public CustomerDTO getDto() {
 
 		CustomerDTO dto = initDTO(new CustomerDTO());
 		dto.setClientName(clientName);
 		dto.setLocation(location);
-		dto.setContactNumber(Long.parseLong(contactNumber));
+		dto.setContactNumber(contactNumber);
 		dto.setImportance(importance);
 		return dto;
 	}

@@ -26,7 +26,7 @@ public abstract class BaseDTO implements Serializable, DropdownList, Comparable<
 	 */
 	@Id
 	@GeneratedValue(generator = "ncsPk")
-	@GenericGenerator(name = "ncsPk", strategy = "native")
+	@GenericGenerator(name = "ncsPk", strategy = "increment")
 	@Column(name = "ID", unique = true, nullable = false)
 	protected Long id;
 	/**
@@ -128,7 +128,7 @@ public abstract class BaseDTO implements Serializable, DropdownList, Comparable<
 	}
 	
 	public String getKey() {
-		return String.valueOf(id);
+		return id+"";
 	}
 
 	/**

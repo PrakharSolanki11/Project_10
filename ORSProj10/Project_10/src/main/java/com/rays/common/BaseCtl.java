@@ -215,7 +215,6 @@ public abstract class BaseCtl<F extends BaseForm, T extends BaseDTO, S extends B
 		// 0 is first page index
 		pageNo = (pageNo < 0) ? 0 : pageNo;
 
-		System.out.println("Operation :: " + form.getOperation());
 
 		T dto = (T) form.getDto();
 

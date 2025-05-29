@@ -6,6 +6,5 @@ import com.rays.dto.CustomerDTO;
 
 public interface CustomerServiceInt extends BaseServiceInt<CustomerDTO> { 
 	
-	public CustomerDTO findByName(String name ,UserContext userContext);
 
 }

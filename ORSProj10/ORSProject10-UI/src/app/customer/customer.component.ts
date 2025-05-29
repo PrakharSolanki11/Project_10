@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseCtl } from '../base.component';
-import { ServiceLocatorService } from '../service-locator.service';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
+import { ServiceLocatorService } from '../service-locator.service';
 
 @Component({
   selector: 'app-customer',
@@ -10,74 +9,66 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent extends BaseCtl {
+  errorMessageTitle: string = '';
+  errorMessageClientName: string = '';
 
-  
-    getKey = false;
-    selected = null;
-    constructor(public locator: ServiceLocatorService, public route: ActivatedRoute, private httpClient: HttpClient) {
-      super(locator.endpoints.CUSTOMER, locator, route);
-    }
-  
-    submit() {
-      var _self = this;
-      console.log('in submit');
-      console.log(this.form);
-      console.log(this.form.data);
-      this.serviceLocator.httpService.post(this.api.save, this.form.data, function (res) {
-        _self.form.message = '';
-        _self.form.data.id = res.result.data;
-      
-        if (res.success) {
-          _self.form.message = "Data is saved";
-          _self.form.data.id = res.result.data;
-  
-          console.log(_self.form.data.id);
-          console.log("----------Rahul----------.");
-  
-        } else {
-          _self.form.error = true;
-          if (res.result.inputerror) {
-            _self.form.inputerror = res.result.inputerror;
-          }
-          _self.form.message = res.result.message;
-        }
-        _self.form.data.id = res.result.data;
-        console.log('FORM', _self.form);
-      });
-    }
+  constructor(public locator: ServiceLocatorService, public route: ActivatedRoute) {
+    super(locator.endpoints.CUSTOMER, locator, route);
+  }
 
-     validateForm(form) {
+   onUpload(userform: FormData) {
+    this.submit();
+    console.log(this.form.data.id + '---- after submit');
+
+  }
+
+  validateForm(form) {
     let flag = true;
     let validator = this.serviceLocator.dataValidator;
-    
     flag = flag && validator.isNotNullObject(form.clientName);
-    console.log(form.clientName);
     flag = flag && validator.isNotNullObject(form.location);
-    console.log(form.location);
     flag = flag && validator.isNotNullObject(form.contactNumber);
-    console.log(form.contactNumber);
     flag = flag && validator.isNotNullObject(form.importance);
-    console.log(form.importance);
-   
+
     return flag;
   }
-  
-    populateForm(form, data) {
-      form.id = data.id;
-      console.log(form.id + 'populate form in customercomponent');
-      form.clientName = data.clientName;
-      form.location = data.location;
-      form.contactNumber = data.contactNumber;
-      form.importance = data.importance;
+
+  populateForm(form, data) {
+    form.id = data.id;
+    form.clientName = data.clientName;
+    form.location = data.location;
+    form.contactNumber = data.contactNumber;
+    form.importance = data.importance;
+  }
+
+  validateName(event: KeyboardEvent): void {
+    const inputValue = (event.target as HTMLInputElement).value;
+    const inputChar = event.key;
+    const alphabetPattern = /^[a-zA-Z]*$/;  // Pattern to match only alphabetic characters
+
+    if (!alphabetPattern.test(inputChar) && !['Backspace', 'Delete', 'Tab'].includes(inputChar)) {
+      event.preventDefault();
+      this.errorMessageClientName = 'Only alphabets are allowed.';
+      return;
     }
-    
-    parseDate(dateString: string): Date {
-      if (dateString) {
-        return new Date(dateString);
-      }
-      return null;
+
+    if (inputValue.length < 3) {
+      this.errorMessageClientName = 'fullName must be at least 3 characters long.';
+    } else if (inputValue.length > 15) {
+      this.errorMessageClientName= 'fullName must not exceed 15 characters.';
+    } else {
+      this.errorMessageClientName = '';  // Clear error message if valid
     }
-    test() {
-  
+  }
+
+  validateAlphabetInput(event) {
+    const charCode = event.which || event.keyCode;
+    const charStr = String.fromCharCode(charCode);
+
+    // Regular expression to test if the character is a letter
+    if (!/^[a-zA-Z]+$/.test(charStr)) {
+      event.preventDefault();
     }
+  }
+
 }
