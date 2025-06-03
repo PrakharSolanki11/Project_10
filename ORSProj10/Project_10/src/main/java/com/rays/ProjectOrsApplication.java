@@ -1,6 +1,6 @@
 package com.rays;
 
-import org.springframework.beans.factory.annotation.Autowired; 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -46,17 +46,16 @@ public class ProjectOrsApplication extends SpringBootServletInitializer {
 			 * Add CORS
 			 * 
 			 */
-			
-			public void addCorsMappings(CorsRegistry registry){
-				CorsRegistration cors = registry.addMapping("/**");
 
+			public void addCorsMappings(CorsRegistry registry) {
+				CorsRegistration cors = registry.addMapping("/**");
 				cors.allowedOrigins("http://localhost:4200");
 				cors.allowedMethods("GET", "POST", "PUT", "DELETE");
 				cors.allowedHeaders("*");
 				cors.allowCredentials(true);
 			}
-             
-			 /**
+
+			/**
 			 * Add Interceptors
 			 */
 
@@ -67,7 +66,7 @@ public class ProjectOrsApplication extends SpringBootServletInitializer {
 			 */
 
 			@Override
-			public void addResourceHandlers(ResourceHandlerRegistry registry){
+			public void addResourceHandlers(ResourceHandlerRegistry registry) {
 				registry.addResourceHandler("/**").addResourceLocations("classpath:/public/");
 			}
 

@@ -1,8 +1,10 @@
 package com.rays.form;
 
-import javax.validation.constraints.NotEmpty;
+import java.util.Date;
 
-import com.rays.common.BaseDTO;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import com.rays.common.BaseForm;
 import com.rays.dto.ProductDTO;
 
@@ -13,6 +15,15 @@ public class ProductForm extends BaseForm {
 
 	@NotEmpty(message = "please enter description")
 	private String description;
+
+	@NotNull(message = "please enter price")
+	private Integer price;
+
+	@NotNull(message = "please enter date Of Purchase")
+	private Date dateOfPurchase;
+
+	@NotEmpty(message = "please enter category")
+	private String category;
 
 	public String getName() {
 		return name;
@@ -30,14 +41,40 @@ public class ProductForm extends BaseForm {
 		this.description = description;
 	}
 
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public Date getDateOfPurchase() {
+		return dateOfPurchase;
+	}
+
+	public void setDateOfPurchase(Date dateOfPurchase) {
+		this.dateOfPurchase = dateOfPurchase;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
 	@Override
-	public BaseDTO getDto() {
+	public ProductDTO getDto() {
 
 		ProductDTO dto = initDTO(new ProductDTO());
-		dto.setDescription(description);
 		dto.setName(name);
+		dto.setDescription(description);
+		dto.setPrice(price);
+		dto.setDateOfPurchase(dateOfPurchase);
+		dto.setCategory(category);
 		return dto;
-
 	}
 
 }

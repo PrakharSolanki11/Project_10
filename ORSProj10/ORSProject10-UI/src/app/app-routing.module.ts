@@ -38,6 +38,8 @@ import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list.component';
 import { CustomerComponent } from './customer/customer.component';
 import { CustomerlistComponent } from './customer/customer-list.component';
+import { ItemComponent } from './item/item.component';
+import { ItemlistComponent } from './item/itemlist.component';
 
 const routes: Routes = [
     {
@@ -281,6 +283,22 @@ const routes: Routes = [
 
 
     },
+    {
+        path: 'item',
+        component: ItemComponent
+
+    },
+    {
+        path: 'itemlist',
+        component: ItemlistComponent
+
+    },
+    {
+        path: 'item/:id',
+        component: ItemComponent
+
+    },
+
 
 
 
