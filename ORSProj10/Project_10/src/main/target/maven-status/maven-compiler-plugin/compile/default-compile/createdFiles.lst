@@ -3,7 +3,6 @@ com\rays\service\ProductServiceInt.class
 com\rays\service\CustomerServiceInt.class
 com\rays\service\TimeTableServiceInt.class
 com\rays\dao\MarksheetDAOInt.class
-com\rays\ctl\ItemCtl.class
 com\rays\dto\SubjectDTO.class
 com\rays\form\ProductForm.class
 com\rays\common\mail\EmailForm.class
@@ -14,7 +13,6 @@ com\rays\common\attachment\AttachmentDAOInt.class
 com\rays\dao\MarksheetDAOImpl.class
 com\rays\dao\StudentDAOInt.class
 com\rays\ProjectOrsApplication.class
-com\rays\service\ItemServiceInt.class
 com\rays\common\BaseDAOImpl.class
 com\rays\service\UserServiceImpl.class
 com\rays\ctl\JasperCtl.class
@@ -30,7 +28,6 @@ com\rays\service\SubjectServiceImpl.class
 com\rays\ctl\FacultyCtl.class
 com\rays\common\BaseForm.class
 com\rays\form\MarksheetForm.class
-com\rays\dao\ItemDAOInt.class
 com\rays\dao\TimeTableDAOInt.class
 com\rays\ctl\RoleCtl.class
 com\rays\service\RoleServiceImpl.class
@@ -95,7 +92,6 @@ com\rays\common\attachment\AttachmentCtl.class
 com\rays\service\RoleServiceInt.class
 com\rays\dao\FacultyDAOImpl.class
 com\rays\ctl\ProductCtl.class
-com\rays\dao\ItemDAOImpl.class
 com\rays\form\CourseForm.class
 com\rays\common\BaseDTO.class
 com\rays\common\FrontCtl.class
@@ -113,14 +109,12 @@ com\rays\common\UserContext.class
 com\rays\dto\UserDTO.class
 com\rays\dto\CollegeDTO.class
 com\rays\form\ChangePasswordForm.class
-com\rays\form\ItemForm.class
 com\rays\form\CustomerForm.class
 com\rays\service\FacultyServiceInt.class
 com\rays\service\JWTUserDetailsService.class
 com\rays\common\MenuItem.class
 com\rays\dao\RoleDAOImpl.class
 com\rays\common\mail\EmailCtl.class
-com\rays\service\ItemServiceImpl.class
 com\rays\common\message\MessageForm.class
 com\rays\dto\RoleDTO.class
 com\rays\common\BaseDAOInt.class
@@ -129,7 +123,6 @@ com\rays\common\ApplicationExceptionHandlerCtl.class
 com\rays\form\TimeTableForm.class
 com\rays\common\attachment\AttachmentDTO.class
 com\rays\form\SubjectForm.class
-com\rays\dto\ItemDTO.class
 com\rays\common\message\MessageServiceInt.class
 com\rays\dao\UserDAOInt.class
 com\rays\config\JWTUtil.class

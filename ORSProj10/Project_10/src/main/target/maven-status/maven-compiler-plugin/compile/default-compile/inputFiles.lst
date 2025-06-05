@@ -9,7 +9,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\MarksheetDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\ForgetPasswordForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\JasperCtl.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\ItemForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\message\MessageForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\ApplicationExceptionHandlerCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\mail\EmailForm.java
@@ -17,7 +16,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\UserCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\StudentForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\message\MessageDAOImpl.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\ItemCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\CollegeCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\RoleServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseCtl.java
@@ -37,7 +35,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\StudentCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\message\MessageDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\exception\ApplicationException.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\ItemServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\UserRegistrationForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\message\MessageCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\StudentDAOImpl.java
@@ -59,7 +56,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\DropdownList.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\CustomerForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\UserDAOImpl.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\ItemDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CourseDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\SubjectCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\MarksheetServiceImpl.java
@@ -69,7 +65,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\LoginForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\TimeTableServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\TimeTableDTO.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\ItemServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\CustomerServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\attachment\AttachmentServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseServiceImpl.java
@@ -127,8 +122,6 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\MarksheetForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\FacultyCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\TimeTableCtl.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\ItemDAOImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseServiceInt.java
-D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\ItemDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\FacultyServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\CourseServiceImpl.java

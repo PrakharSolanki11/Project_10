@@ -71,10 +71,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_product_list_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./product/product-list.component */ "./src/app/product/product-list.component.ts");
 /* harmony import */ var _customer_customer_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./customer/customer.component */ "./src/app/customer/customer.component.ts");
 /* harmony import */ var _customer_customer_list_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./customer/customer-list.component */ "./src/app/customer/customer-list.component.ts");
-/* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./item/item.component */ "./src/app/item/item.component.ts");
-/* harmony import */ var _item_itemlist_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./item/itemlist.component */ "./src/app/item/itemlist.component.ts");
-
-
 
 
 
@@ -123,6 +119,33 @@ var routes = [
         path: 'dashboard',
         component: _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashboardComponent"]
     },
+    // ***********CUSTOMER*************
+    {
+        path: 'customer',
+        component: _customer_customer_component__WEBPACK_IMPORTED_MODULE_36__["CustomerComponent"]
+    },
+    {
+        path: 'customerlist',
+        component: _customer_customer_list_component__WEBPACK_IMPORTED_MODULE_37__["CustomerlistComponent"]
+    },
+    {
+        path: 'customer/:id',
+        component: _customer_customer_component__WEBPACK_IMPORTED_MODULE_36__["CustomerComponent"]
+    },
+    // ***********PRODUCT*************
+    {
+        path: 'product',
+        component: _product_product_component__WEBPACK_IMPORTED_MODULE_34__["ProductComponent"]
+    },
+    {
+        path: 'productlist',
+        component: _product_product_list_component__WEBPACK_IMPORTED_MODULE_35__["ProductListComponent"]
+    },
+    {
+        path: 'product/:id',
+        component: _product_product_component__WEBPACK_IMPORTED_MODULE_34__["ProductComponent"]
+    },
+    // ======================================
     {
         path: 'loader',
         component: _loader_loader_component__WEBPACK_IMPORTED_MODULE_31__["LoaderComponent"]
@@ -228,30 +251,6 @@ var routes = [
         component: _role_role_component__WEBPACK_IMPORTED_MODULE_17__["RoleComponent"]
     },
     {
-        path: 'customer',
-        component: _customer_customer_component__WEBPACK_IMPORTED_MODULE_36__["CustomerComponent"]
-    },
-    {
-        path: 'customerlist',
-        component: _customer_customer_list_component__WEBPACK_IMPORTED_MODULE_37__["CustomerlistComponent"]
-    },
-    {
-        path: 'customer/:id',
-        component: _customer_customer_component__WEBPACK_IMPORTED_MODULE_36__["CustomerComponent"]
-    },
-    {
-        path: 'product',
-        component: _product_product_component__WEBPACK_IMPORTED_MODULE_34__["ProductComponent"]
-    },
-    {
-        path: 'productlist',
-        component: _product_product_list_component__WEBPACK_IMPORTED_MODULE_35__["ProductListComponent"]
-    },
-    {
-        path: 'product/:id',
-        component: _product_product_component__WEBPACK_IMPORTED_MODULE_34__["ProductComponent"]
-    },
-    {
         path: 'course',
         component: _course_course_component__WEBPACK_IMPORTED_MODULE_18__["CourseComponent"]
     },
@@ -310,18 +309,6 @@ var routes = [
     {
         path: 'changepassword',
         component: _user_changepassword_component__WEBPACK_IMPORTED_MODULE_30__["ChangepasswordComponent"]
-    },
-    {
-        path: 'item',
-        component: _item_item_component__WEBPACK_IMPORTED_MODULE_38__["ItemComponent"]
-    },
-    {
-        path: 'itemlist',
-        component: _item_itemlist_component__WEBPACK_IMPORTED_MODULE_39__["ItemlistComponent"]
-    },
-    {
-        path: 'item/:id',
-        component: _item_item_component__WEBPACK_IMPORTED_MODULE_38__["ItemComponent"]
     },
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -454,10 +441,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_product_list_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./product/product-list.component */ "./src/app/product/product-list.component.ts");
 /* harmony import */ var _customer_customer_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./customer/customer.component */ "./src/app/customer/customer.component.ts");
 /* harmony import */ var _customer_customer_list_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./customer/customer-list.component */ "./src/app/customer/customer-list.component.ts");
-/* harmony import */ var _item_item_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./item/item.component */ "./src/app/item/item.component.ts");
-/* harmony import */ var _item_itemlist_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./item/itemlist.component */ "./src/app/item/itemlist.component.ts");
-
-
 
 
 
@@ -557,8 +540,6 @@ var AppModule = /** @class */ (function () {
                 _product_product_list_component__WEBPACK_IMPORTED_MODULE_47__["ProductListComponent"],
                 _customer_customer_component__WEBPACK_IMPORTED_MODULE_48__["CustomerComponent"],
                 _customer_customer_list_component__WEBPACK_IMPORTED_MODULE_49__["CustomerlistComponent"],
-                _item_item_component__WEBPACK_IMPORTED_MODULE_50__["ItemComponent"],
-                _item_itemlist_component__WEBPACK_IMPORTED_MODULE_51__["ItemlistComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -1595,7 +1576,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  .grad {\r\n    background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));\r\n    background-repeat: no-repeat;\r\n    background-size: 100%;\r\n    padding-bottom: 25px;\r\n  }\r\n\r\n  .background {\r\n    padding-top: 3%;\r\n    padding-bottom: 13%;\r\n    background: url('assets/files/wall.jpg') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: auto;\r\n  }\r\n\r\n  .required-field {\r\n    color: red;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n\r\n<div class=\"container-fluid background\">\r\n  <div class=\"row justify-content-center\">\r\n    <div class=\"col-sm-8 col-md-6 col-lg-4\">\r\n      <div class=\"card\">\r\n        <div class=\"card-body shadow-lg grad\">\r\n          <form name=\"assetForm\">\r\n            <h2 *ngIf=\"!form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Add Customer' | translate }}\r\n            </h2>\r\n            <h2 *ngIf=\"form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Update Customer' | translate }}\r\n            </h2>\r\n\r\n            <!-- Form error messages -->\r\n            <div *ngIf=\"form.error && form.message\" class=\"alert alert-danger alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n            <div *ngIf=\"!form.error && form.message\" class=\"alert alert-success alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n\r\n            <!-- Name Field with Validation -->\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label>\r\n                <b>{{ 'ClientName' | translate }}</b>\r\n                <span class=\"required-field\">*</span>\r\n              </label>\r\n\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-user grey-text\"></i></div>\r\n                </div>\r\n\r\n                <input type=\"text\" name=\"clientName\" [(ngModel)]=\"form.data.clientName\" class=\"form-control\"\r\n                  #clientName=\"ngModel\" minlength=\"2\" maxlength=\"20\" pattern=\"^[A-Za-z ]+$\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessageclientName', 20, 'char')\"\r\n                  placeholder=\"{{ 'Enter clientName' | translate }}\">\r\n              </div>\r\n\r\n              <!-- Angular built-in validation messages -->\r\n              <div *ngIf=\"clientName.invalid && clientName.touched\" class=\"alertRedColor\">\r\n                <div *ngIf=\"clientName.errors?.required\">{{ 'Client name is required' | translate }}</div>\r\n                <div *ngIf=\"clientName.errors?.minlength\">{{ 'Client name is too short' | translate }}</div>\r\n                <div *ngIf=\"clientName.errors?.maxlength\">{{ 'Client name is too long' | translate }}</div>\r\n                <div *ngIf=\"clientName.errors?.pattern\">{{ 'Only letters and spaces are allowed' | translate }}</div>\r\n              </div>\r\n\r\n              <!-- Custom error messages from component -->\r\n              <span *ngIf=\"errorMessageclientName\" class=\"alertRedColor\">{{ errorMessageclientName }}</span>\r\n              <span *ngIf=\"form.inputerror?.clientName\" class=\"alertRedColor\">{{ form.inputerror.clientName }}</span>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'Location' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fas fa-map-marker grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"text\" name=\"location\" [(ngModel)]=\"form.data.location\" class=\"form-control\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessagelocation', 20, 'char')\"\r\n                  placeholder=\"{{ 'Enter location' | translate }}\">\r\n              </div>\r\n              <span *ngIf=\"errorMessagelocation\" class=\"alertRedColor\">{{ errorMessagelocation }}</span>\r\n              <span *ngIf=\"form.inputerror?.location\" class=\"alertRedColor\">{{ form.inputerror.location }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label>\r\n                <b>{{ 'ContactNumber' | translate }}</b>\r\n                <span class=\"required-field\">*</span>\r\n              </label>\r\n\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\">\r\n                    <i class=\"fa fa-phone grey-text\"></i>\r\n                  </div>\r\n                </div>\r\n\r\n                <input type=\"text\" name=\"contactNumber\" [(ngModel)]=\"form.data.contactNumber\" #contactNumber=\"ngModel\"\r\n                  class=\"form-control\" minlength=\"10\" maxlength=\"10\" pattern=\"^[0-9]{10}$\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessagecontactNumber', 10, 'int')\"\r\n                  placeholder=\"{{ 'Enter contactNumber' | translate }}\">\r\n              </div>\r\n\r\n              <!-- Angular validation messages -->\r\n              <div *ngIf=\"contactNumber.invalid && contactNumber.touched\" class=\"alertRedColor\">\r\n                <div *ngIf=\"contactNumber.errors?.required\">{{ 'Contact number is required' | translate }}</div>\r\n                <div *ngIf=\"contactNumber.errors?.minlength || contactNumber.errors?.maxlength\">\r\n                  {{ 'Contact number must be exactly 10 digits' | translate }}\r\n                </div>\r\n                <div *ngIf=\"contactNumber.errors?.pattern\">{{ 'Only numeric digits are allowed' | translate }}</div>\r\n              </div>\r\n\r\n              <!-- Custom validation messages from component -->\r\n              <span *ngIf=\"errorMessagecontactNumber\" class=\"alertRedColor\">{{ errorMessagecontactNumber }}</span>\r\n              <span *ngIf=\"form.inputerror?.contactNumber\" class=\"alertRedColor\">{{ form.inputerror.contactNumber }}</span>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'importance' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-paint-brush grey-text\"></i></div>\r\n                </div>\r\n                <select class=\"form-control\" name=\"importance\" [(ngModel)]=\"form.data.importance\"\r\n                  aria-label=\"ngSelected\" required>\r\n                  <option [ngValue]=\"undefined\">{{ 'Select importance' | translate }}</option>\r\n                  <option value=\"High\">{{ 'High' | translate }}</option>\r\n                  <option value=\"Medium\">{{ 'Medium' | translate }}</option>\r\n                  <option value=\"Low\">{{ 'Low' | translate }}</option>\r\n                </select>\r\n              </div>\r\n              <span *ngIf=\"form.inputerror?.importance\" class=\"alertRedColor\">{{ form.inputerror.importance }}</span>\r\n            </div>\r\n\r\n            <div class=\"row pt-2 pl-2 pb-3\">\r\n\r\n              <div class=\"col-md-3\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"!form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Save' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"col-md-1\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Update' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"pt-2\">\r\n                <a class=\"btn btn-warning mr-1\" type=\"button\" [routerLink]=\"['/customerlist']\"\r\n                  style=\"text-decoration: none; color: white;\">\r\n                  {{ 'List' | translate }}\r\n                </a>\r\n              </div>\r\n\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
+module.exports = "<app-navbar></app-navbar>\r\n\r\n<style>\r\n  .grad {\r\n    background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));\r\n    background-repeat: no-repeat;\r\n    background-size: 100%;\r\n    padding-bottom: 25px;\r\n  }\r\n\r\n  .background {\r\n    padding-top: 3%;\r\n    padding-bottom: 13%;\r\n    background: url('assets/files/wall.jpg') no-repeat center center;\r\n    background-attachment: fixed;\r\n    background-size: cover;\r\n    width: 100%;\r\n    height: auto;\r\n  }\r\n\r\n  .required-field {\r\n    color: red;\r\n  }\r\n\r\n  .alertRedColor {\r\n    color: red;\r\n  }\r\n</style>\r\n\r\n<div class=\"container-fluid background\" style=\"padding-top: 8%\">\r\n  <div class=\"row justify-content-center\">\r\n    <div class=\"col-sm-8 col-md-6 col-lg-4\">\r\n      <div class=\"card\" >\r\n        <div class=\"card-body shadow-lg grad\">\r\n          <form name=\"assetForm\">\r\n            <h2 *ngIf=\"!form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Add Customer' | translate }}\r\n            </h2>\r\n            <h2 *ngIf=\"form.data.id\" class=\"text-primary font-weight-bold\" style=\"text-align: center;\">\r\n              {{ 'Update Customer' | translate }}\r\n            </h2>\r\n\r\n            <!-- Form error messages -->\r\n            <div *ngIf=\"form.error && form.message\" class=\"alert alert-danger alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n            <div *ngIf=\"!form.error && form.message\" class=\"alert alert-success alert-dismissible fade show\">\r\n              <button type=\"button\" class=\"close\" data-dismiss=\"alert\">&times;</button>\r\n              {{ form.message }}\r\n            </div>\r\n\r\n            <!-- Name Field with Validation -->\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label>\r\n                <b>{{ 'ClientName' | translate }}</b>\r\n                <span class=\"required-field\">*</span>\r\n              </label>\r\n\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-user grey-text\"></i></div>\r\n                </div>\r\n\r\n                <input type=\"text\" name=\"clientName\" [(ngModel)]=\"form.data.clientName\" class=\"form-control\"\r\n                  #clientName=\"ngModel\" maxlength=\"20\" pattern=\"^[A-Za-z ]+$\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessageclientName', 20, 'char')\"\r\n                  placeholder=\"{{ 'Enter clientName' | translate }}\">\r\n              </div>\r\n\r\n              <!-- Custom error messages from component -->\r\n              <span *ngIf=\"form.inputerror.clientName\" class=\"alertRedColor\">{{ form.inputerror.clientName }}</span>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label>\r\n                <b>{{ 'Location' | translate }}</b>\r\n                <span class=\"required-field\">*</span>\r\n              </label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fas fa-map-marker grey-text\"></i></div>\r\n                </div>\r\n                <input type=\"text\" name=\"location\" [(ngModel)]=\"form.data.location\" class=\"form-control\"\r\n                   maxlength=\"35\"\r\n                  placeholder=\"{{ 'Enter location' | translate }}\">\r\n              </div>\r\n              <span *ngIf=\"form.inputerror.location\" class=\"alertRedColor\">{{ form.inputerror.location }}</span>\r\n            </div>\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label>\r\n                <b>{{ 'ContactNumber' | translate }}</b>\r\n                <span class=\"required-field\">*</span>\r\n              </label>\r\n\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\">\r\n                    <i class=\"fa fa-phone grey-text\"></i>\r\n                  </div>\r\n                </div>\r\n\r\n                <input type=\"text\" name=\"contactNumber\" [(ngModel)]=\"form.data.contactNumber\" #contactNumber=\"ngModel\"\r\n                  class=\"form-control\"  maxlength=\"10\" pattern=\"^[0-9]{10}$\"\r\n                  (keydown)=\"filterInputS($event, 'errorMessagecontactNumber', 10, 'int')\"\r\n                  placeholder=\"{{ 'Enter contactNumber' | translate }}\">\r\n              </div>\r\n\r\n              <!-- Custom validation messages from component -->\r\n              <span *ngIf=\"form.inputerror?.contactNumber\" class=\"alertRedColor\">{{ form.inputerror.contactNumber\r\n                }}</span>\r\n            </div>\r\n\r\n\r\n            <div class=\"form-group pt-2\">\r\n              <label><b>{{ 'importance' | translate }}</b><span class=\"required-field\">*</span></label>\r\n              <div class=\"input-group\">\r\n                <div class=\"input-group-prepend\">\r\n                  <div class=\"input-group-text\"><i class=\"fa fa-paint-brush grey-text\"></i></div>\r\n                </div>\r\n                <select class=\"form-control\" name=\"importance\" [(ngModel)]=\"form.data.importance\"\r\n                  aria-label=\"ngSelected\" required>\r\n                  <option [ngValue]=\"undefined\">{{ 'Select importance' | translate }}</option>\r\n                  <option value=\"High\">{{ 'High' | translate }}</option>\r\n                  <option value=\"Medium\">{{ 'Medium' | translate }}</option>\r\n                  <option value=\"Low\">{{ 'Low' | translate }}</option>\r\n                </select>\r\n              </div>\r\n              <span *ngIf=\"form.inputerror?.importance\" class=\"alertRedColor\">{{ form.inputerror.importance }}</span>\r\n            </div>\r\n\r\n            <div class=\"row pt-2 pl-2 pb-3\">\r\n\r\n              <div class=\"col-md-3\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"!form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Save' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"col-md-1\"></div>\r\n\r\n              <div class=\"pt-2\">\r\n                <button *ngIf=\"form.data.id > 0\" (click)=\"submit()\" class=\"btn btn-success mr-2\">\r\n                  {{ 'Update' | translate }}\r\n                </button>\r\n              </div>\r\n\r\n              <div class=\"pt-2\">\r\n                <a class=\"btn btn-warning mr-1\" type=\"button\" [routerLink]=\"['/customerlist']\"\r\n                  style=\"text-decoration: none; color: white;\">\r\n                  {{ 'List' | translate }}\r\n                </a>\r\n              </div>\r\n\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<app-footer></app-footer>"
 
 /***/ }),
 
@@ -2181,176 +2162,6 @@ var HttpServiceService = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], HttpServiceService);
     return HttpServiceService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/item/item.component.css":
-/*!*****************************************!*\
-  !*** ./src/app/item/item.component.css ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2l0ZW0vaXRlbS5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/item/item.component.html":
-/*!******************************************!*\
-  !*** ./src/app/item/item.component.html ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\r\n  item works!\r\n</p>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/item/item.component.ts":
-/*!****************************************!*\
-  !*** ./src/app/item/item.component.ts ***!
-  \****************************************/
-/*! exports provided: ItemComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemComponent", function() { return ItemComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _base_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../base.component */ "./src/app/base.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _service_locator_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../service-locator.service */ "./src/app/service-locator.service.ts");
-
-
-
-
-
-var ItemComponent = /** @class */ (function (_super) {
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__extends"](ItemComponent, _super);
-    function ItemComponent(locator, route) {
-        var _this = _super.call(this, locator.endpoints.ITEM, locator, route) || this;
-        _this.locator = locator;
-        _this.route = route;
-        _this.errorMessageTitle = '';
-        _this.errorMessageClientName = '';
-        return _this;
-    }
-    ItemComponent.prototype.onUpload = function (userform) {
-        this.submit();
-        console.log(this.form.data.id + '---- after submit');
-    };
-    ItemComponent.prototype.validateForm = function (form) {
-        var flag = true;
-        var validator = this.serviceLocator.dataValidator;
-        flag = flag && validator.isNotNullObject(form.clientName);
-        flag = flag && validator.isNotNullObject(form.location);
-        flag = flag && validator.isNotNullObject(form.contactNumber);
-        flag = flag && validator.isNotNullObject(form.importance);
-        return flag;
-    };
-    ItemComponent.prototype.populateForm = function (form, data) {
-        form.id = data.id;
-        form.clientName = data.clientName;
-        form.location = data.location;
-        form.contactNumber = data.contactNumber;
-        form.importance = data.importance;
-    };
-    ItemComponent.prototype.validateName = function (event) {
-        var inputValue = event.target.value;
-        var inputChar = event.key;
-        var alphabetPattern = /^[a-zA-Z]*$/; // Pattern to match only alphabetic characters
-        if (!alphabetPattern.test(inputChar) && !['Backspace', 'Delete', 'Tab'].includes(inputChar)) {
-            event.preventDefault();
-            this.errorMessageClientName = 'Only alphabets are allowed.';
-            return;
-        }
-        if (inputValue.length < 3) {
-            this.errorMessageClientName = 'fullName must be at least 3 characters long.';
-        }
-        else if (inputValue.length > 15) {
-            this.errorMessageClientName = 'fullName must not exceed 15 characters.';
-        }
-        else {
-            this.errorMessageClientName = ''; // Clear error message if valid
-        }
-    };
-    ItemComponent.prototype.validateAlphabetInput = function (event) {
-        var charCode = event.which || event.keyCode;
-        var charStr = String.fromCharCode(charCode);
-        // Regular expression to test if the character is a letter
-        if (!/^[a-zA-Z]+$/.test(charStr)) {
-            event.preventDefault();
-        }
-    };
-    ItemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-item',
-            template: __webpack_require__(/*! ./item.component.html */ "./src/app/item/item.component.html"),
-            styles: [__webpack_require__(/*! ./item.component.css */ "./src/app/item/item.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_service_locator_service__WEBPACK_IMPORTED_MODULE_4__["ServiceLocatorService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
-    ], ItemComponent);
-    return ItemComponent;
-}(_base_component__WEBPACK_IMPORTED_MODULE_2__["BaseCtl"]));
-
-
-
-/***/ }),
-
-/***/ "./src/app/item/itemlist.component.css":
-/*!*********************************************!*\
-  !*** ./src/app/item/itemlist.component.css ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2l0ZW0vaXRlbWxpc3QuY29tcG9uZW50LmNzcyJ9 */"
-
-/***/ }),
-
-/***/ "./src/app/item/itemlist.component.html":
-/*!**********************************************!*\
-  !*** ./src/app/item/itemlist.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\r\n  itemlist works!\r\n</p>\r\n"
-
-/***/ }),
-
-/***/ "./src/app/item/itemlist.component.ts":
-/*!********************************************!*\
-  !*** ./src/app/item/itemlist.component.ts ***!
-  \********************************************/
-/*! exports provided: ItemlistComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemlistComponent", function() { return ItemlistComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-
-
-var ItemlistComponent = /** @class */ (function () {
-    function ItemlistComponent() {
-    }
-    ItemlistComponent.prototype.ngOnInit = function () {
-    };
-    ItemlistComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-itemlist',
-            template: __webpack_require__(/*! ./itemlist.component.html */ "./src/app/item/itemlist.component.html"),
-            styles: [__webpack_require__(/*! ./itemlist.component.css */ "./src/app/item/itemlist.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], ItemlistComponent);
-    return ItemlistComponent;
 }());
 
 
@@ -3353,7 +3164,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<style type=\"text/css\">\r\n  .custom-select-box {\r\n    border-radius: 5px;\r\n    height: 20%;\r\n    width: 12%;\r\n    border-color: black;\r\n    /* Rounded corners */\r\n  }\r\n\r\n  .prakhar {\r\n    background-image: linear-gradient(220deg, #0d0a0b 0%, #009fc2 120%);\r\n  }\r\n\r\n  .c1 {\r\n    color: rgb(235, 6, 6);\r\n  }\r\n</style>\r\n\r\n<div class=\"header\">\r\n  <nav *ngIf=\"!isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n    <div class=\"logo\">\r\n      <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n        <!-- <strong class=\"text-white\">Rays</strong> -->\r\n        <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n      </a>\r\n    </div>\r\n    <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n      <option value=\"en\">\r\n        {{ \"&nbsp;&nbsp;Select Language\" | translate }}\r\n      </option>\r\n      <option value=\"en\" style=\"color: red\">English</option>\r\n      <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n    </select>\r\n\r\n    <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\" style=\"font-size: 15px\">\r\n      <ul class=\"navbar-nav ml-auto\" style=\"padding-right: 7.5%\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['myNav']\" id=\"navbarDropdown\" role=\"button\"\r\n            data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n            <font style=\"color: white\">{{ \"Hi,Guest\" | translate }} </font>\r\n          </a>\r\n\r\n          <div class=\"dropdown-menu dropdown-ment-left\" id=\"myNav\" aria-labelledby=\"navbarDropdown\">\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/login']\"><i class=\"fa fa-user\"></i> &nbsp;{{ \" Log In\" | translate\r\n              }}</a>\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/signup']\"><i class=\"fa fa-users\"></i> &nbsp;{{\r\n              \"User Registration\" | translate\r\n              }}</a>\r\n          </div>\r\n        </li>\r\n        <li></li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n</div>\r\n\r\n<nav *ngIf=\"isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n  <div class=\"logo\">\r\n    <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n      <!-- <strong class=\"text-white\">Rays</strong> -->\r\n      <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n    </a>\r\n  </div>\r\n  <!-- <strong class=\"text-white\">NCS Pvt Ltd</strong> -->\r\n\r\n  <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n    <option value=\"en\">{{ \"&nbsp;&nbsp;Select Language\" | translate }}</option>\r\n    <option value=\"en\" style=\"color: red\">English</option>\r\n    <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n  </select>\r\n\r\n  <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n    <ul class=\"nav navbar-nav pl-2\">\r\n\r\n      <!-- =================================== PRODUCT =========================================== -->\r\n      \r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Product\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/product']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add Product\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/productlist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"Product List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n    <!-- =================================== CUSTOMER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Customer\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/customer']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add Customer\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/customerlist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"Customer List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li> \r\n\r\n    <!-- =================================== USER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"User\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/user']\"><i class=\"fa fa-user\"></i>&nbsp;&nbsp;{{\r\n            \"Add User\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/userlist']\"><i class=\"fa fa-list\"></i>&nbsp;{{ \" User List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Marksheet\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheet']\"><i class=\"fa fa-file\"></i> &nbsp;\r\n            {{ \"Add Marksheet\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetlist']\"><i class=\"fa fa-paste\"></i> &nbsp;\r\n            {{ \"Marksheet List\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetmeritlist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"Marksheet Merit List\" | translate }}\r\n          </a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/getmarksheet']\"><i class=\"fa fa-copy\"></i> &nbsp;\r\n            {{ \"Get Marksheet\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Role\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/role']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;\r\n            {{ \"Add Role\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/rolelist']\"><i class=\"fa fa-users\"></i> &nbsp; {{ \"Role List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"College\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/college']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add College\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/collegelist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"College List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Course\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/course']\"><i class=\"fa fa-book\"></i> &nbsp; {{ \"Add Course\" |\r\n            translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/courselist']\"><i class=\"fa fa-list\"></i> &nbsp; {{ \"Course List\" |\r\n            translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Student\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/student']\"><i class=\"fa fa-user\"></i> &nbsp;\r\n            {{ \"Add Student\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/studentlist']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{\r\n            \"Student\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Faculty\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/faculty']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{ \"Add Faculty\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/facultylist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Faculty\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"TimeTable\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetable']\"><i class=\"fa fa-clock-o\"></i> &nbsp;\r\n            {{ \"Add TimeTable\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetablelist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"TimeTable List\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Subject\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subject']\"><i class=\"fa fa-calculator\"></i> &nbsp;\r\n            {{ \"Add Subject\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subjectlist']\">\r\n            <i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Subject\r\n            List\" | translate\r\n            }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ form.data.fname }} ({{ form.data.role }})\r\n          </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" (click)=\"forward()\"><i class=\"fa fa-user-md\"></i> &nbsp;{{\r\n            \" My Profile\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/changepassword']\"><i class=\"fa fa-key\"></i> &nbsp;{{\r\n            \"Change Password\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"\" (click)=\"goToLink()\"><i class=\"fa fa-file\"></i> &nbsp;{{ \" Java Doc\"\r\n            | translate }}</a>\r\n\r\n          <a class=\"dropdown-item\" (click)=\"logout()\"><i class=\"fa fa-lock\"></i> &nbsp;{{ \" Log Out\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
+module.exports = "<style type=\"text/css\">\r\n  .custom-select-box {\r\n    border-radius: 5px;\r\n    height: 20%;\r\n    width: 12%;\r\n    border-color: black;\r\n    /* Rounded corners */\r\n  }\r\n\r\n  .prakhar {\r\n    background-image: linear-gradient(220deg, #0d0a0b 0%, #009fc2 120%);\r\n  }\r\n\r\n  .c1 {\r\n    color: rgb(235, 6, 6);\r\n  }\r\n</style>\r\n\r\n<div class=\"header\">\r\n  <nav *ngIf=\"!isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n    <div class=\"logo\">\r\n      <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n        <!-- <strong class=\"text-white\">Rays</strong> -->\r\n        <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n      </a>\r\n    </div>\r\n    <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n      <option value=\"en\">\r\n        {{ \"&nbsp;&nbsp;Select Language\" | translate }}\r\n      </option>\r\n      <option value=\"en\" style=\"color: red\">English</option>\r\n      <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n    </select>\r\n\r\n    <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n      aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\" style=\"font-size: 15px\">\r\n      <ul class=\"navbar-nav ml-auto\" style=\"padding-right: 7.5%\">\r\n        <li class=\"nav-item dropdown\">\r\n          <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['myNav']\" id=\"navbarDropdown\" role=\"button\"\r\n            data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n            <font style=\"color: white\">{{ \"Hi,Guest\" | translate }} </font>\r\n          </a>\r\n\r\n          <div class=\"dropdown-menu dropdown-ment-left\" id=\"myNav\" aria-labelledby=\"navbarDropdown\">\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/login']\"><i class=\"fa fa-user\"></i> &nbsp;{{ \" Log In\" | translate\r\n              }}</a>\r\n            <a class=\"dropdown-item\" [routerLink]=\"['/signup']\"><i class=\"fa fa-users\"></i> &nbsp;{{\r\n              \"User Registration\" | translate\r\n              }}</a>\r\n          </div>\r\n        </li>\r\n        <li></li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n</div>\r\n\r\n<nav *ngIf=\"isLogin()\" class=\"navbar navbar-expand-lg fixed-top prakhar\">\r\n  <div class=\"logo\">\r\n    <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">\r\n      <!-- <strong class=\"text-white\">Rays</strong> -->\r\n      <img src=\"assets\\files\\custom.png\" height=\"40px\" width=\"120px\" />\r\n    </a>\r\n  </div>\r\n  <!-- <strong class=\"text-white\">NCS Pvt Ltd</strong> -->\r\n\r\n  <select #locale (change)=\"changeLocale(locale.value)\" class=\"form-select custom-select-box\">\r\n    <option value=\"en\">{{ \"&nbsp;&nbsp;Select Language\" | translate }}</option>\r\n    <option value=\"en\" style=\"color: red\">English</option>\r\n    <option value=\"hi\" style=\"color: red\">{{ \"Hindi\" | translate }}</option>\r\n  </select>\r\n\r\n  <button class=\"navbar-toggler navbar-light\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\"\r\n    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\r\n    <ul class=\"nav navbar-nav pl-2\">\r\n\r\n      <!-- =================================== CART ===========================================\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Cart Overview\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/cart']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add Cart\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/cartlist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"Cart List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li> \r\n\r\n\r\n       =================================== PRODUCT ===========================================\r\n      \r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Product\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/product']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add Product\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/productlist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"Product List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li> -->\r\n\r\n    <!-- =================================== CUSTOMER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Customer\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/customer']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add Customer\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/customerlist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"Customer List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li> \r\n\r\n    <!-- =================================== USER =========================================== -->\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"User\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/user']\"><i class=\"fa fa-user\"></i>&nbsp;&nbsp;{{\r\n            \"Add User\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/userlist']\"><i class=\"fa fa-list\"></i>&nbsp;{{ \" User List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Marksheet\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheet']\"><i class=\"fa fa-file\"></i> &nbsp;\r\n            {{ \"Add Marksheet\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetlist']\"><i class=\"fa fa-paste\"></i> &nbsp;\r\n            {{ \"Marksheet List\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/marksheetmeritlist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"Marksheet Merit List\" | translate }}\r\n          </a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/getmarksheet']\"><i class=\"fa fa-copy\"></i> &nbsp;\r\n            {{ \"Get Marksheet\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Role\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/role']\"><i class=\"fa fa-user\"></i> &nbsp; &nbsp;\r\n            {{ \"Add Role\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/rolelist']\"><i class=\"fa fa-users\"></i> &nbsp; {{ \"Role List\" |\r\n            translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"College\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/college']\"><i class=\"fa fa-university\"></i> &nbsp;\r\n            {{ \"Add College\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/collegelist']\"><i class=\"fa fa-building\"></i> &nbsp;\r\n            {{ \"College List\" | translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Course\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/course']\"><i class=\"fa fa-book\"></i> &nbsp; {{ \"Add Course\" |\r\n            translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/courselist']\"><i class=\"fa fa-list\"></i> &nbsp; {{ \"Course List\" |\r\n            translate }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Student\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/student']\"><i class=\"fa fa-user\"></i> &nbsp;\r\n            {{ \"Add Student\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/studentlist']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{\r\n            \"Student\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Faculty\" | translate }} </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/faculty']\"><i class=\"fa fa-users\"></i> &nbsp;\r\n            {{ \"Add Faculty\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/facultylist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Faculty\r\n            List\" | translate\r\n            }}</a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"TimeTable\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetable']\"><i class=\"fa fa-clock-o\"></i> &nbsp;\r\n            {{ \"Add TimeTable\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/timetablelist']\"><i class=\"fa fa-list\"></i> &nbsp;\r\n            {{ \"TimeTable List\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ \"Subject\" | translate }}</font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subject']\"><i class=\"fa fa-calculator\"></i> &nbsp;\r\n            {{ \"Add Subject\" | translate }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/subjectlist']\">\r\n            <i class=\"fa fa-list\"></i> &nbsp;\r\n            {{\r\n            \"Subject\r\n            List\" | translate\r\n            }}\r\n          </a>\r\n        </div>\r\n      </li>\r\n\r\n      <li class=\"nav-item dropdown\" style=\"padding-left: 5px\">\r\n        <a class=\"nav-link dropdown-toggle\" [routerLink]=\"['/#']\" id=\"navbarDropdown\" role=\"button\"\r\n          data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n          <font style=\"color: white\">{{ form.data.fname }} ({{ form.data.role }})\r\n          </font>\r\n        </a>\r\n        <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n          <a class=\"dropdown-item\" (click)=\"forward()\"><i class=\"fa fa-user-md\"></i> &nbsp;{{\r\n            \" My Profile\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"['/changepassword']\"><i class=\"fa fa-key\"></i> &nbsp;{{\r\n            \"Change Password\" | translate\r\n            }}</a>\r\n          <a class=\"dropdown-item\" [routerLink]=\"\" (click)=\"goToLink()\"><i class=\"fa fa-file\"></i> &nbsp;{{ \" Java Doc\"\r\n            | translate }}</a>\r\n\r\n          <a class=\"dropdown-item\" (click)=\"logout()\"><i class=\"fa fa-lock\"></i> &nbsp;{{ \" Log Out\" | translate }}</a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 

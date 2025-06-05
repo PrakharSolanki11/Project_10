@@ -1,0 +1,42 @@
+package com.rays.form;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.ParseConversionEvent;
+
+import com.rays.common.BaseDTO;
+import com.rays.common.BaseForm;
+import com.rays.dto.ProductDTO;
+import com.rays.dto.UserDTO;
+
+public class ProductForm extends BaseForm {
+
+	@NotEmpty(message = "please enter name")
+	private String name;
+
+	@NotEmpty(message = "please enter description")
+	private String description;
+
+	@NotNull(message = "please enter price")
+	private int price;
+
+	@NotEmpty(message = "please enter date Of Purchase")
+	private String dateOfPurchase;
+	
+	@NotEmpty(message = "please enter category")
+	private String category;
+
+	
+
+	@Override
+	public ProductDTO getDto() {
+
+		ProductDTO dto = initDTO(new ProductDTO());
+		dto.setClientName(clientName);
+		dto.setLocation(location);
+		dto.setContactNumber(contactNumber);
+		dto.setImportance(importance);
+		return dto;
+	}
+
+}

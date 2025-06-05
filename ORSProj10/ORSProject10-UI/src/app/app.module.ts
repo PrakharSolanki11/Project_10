@@ -54,10 +54,8 @@ import { AuthService } from './auth.service';
 import { MyprofileComponent } from './user/myprofile.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list.component';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerlistComponent } from './customer/customer-list.component';
-import { ItemComponent } from './item/item.component';
-import { ItemlistComponent } from './item/itemlist.component';
+
+
 
 
 
@@ -110,12 +108,9 @@ export function myHttpLoader(http: HttpClient) {
     MyprofileComponent,
     ProductComponent,
     ProductListComponent,
-    CustomerComponent,
-    CustomerlistComponent,
-    ItemComponent,
-    ItemlistComponent
-    
+ 
 
+    
   ],
   imports: [
     BrowserModule,

@@ -36,10 +36,8 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { MyprofileComponent } from './user/myprofile.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product/product-list.component';
-import { CustomerComponent } from './customer/customer.component';
-import { CustomerlistComponent } from './customer/customer-list.component';
-import { ItemComponent } from './item/item.component';
-import { ItemlistComponent } from './item/itemlist.component';
+
+
 
 const routes: Routes = [
     {
@@ -51,6 +49,28 @@ const routes: Routes = [
         path: 'dashboard',
         component: DashboardComponent
     },
+
+   
+
+    // ***********PRODUCT*************
+
+    {
+        path: 'product',
+        component: ProductComponent
+
+    },
+    {
+        path: 'productlist',
+        component: ProductListComponent
+
+    },
+    {
+        path: 'product/:id',
+        component: ProductComponent
+
+    },
+
+    // ======================================
     {
         path: 'loader',
         component: LoaderComponent
@@ -178,36 +198,6 @@ const routes: Routes = [
 
     },
     {
-        path: 'customer',
-        component: CustomerComponent
-
-    },
-    {
-        path: 'customerlist',
-        component: CustomerlistComponent
-
-    },
-    {
-        path: 'customer/:id',
-        component: CustomerComponent
-
-    },
-    {
-        path: 'product',
-        component: ProductComponent
-
-    },
-    {
-        path: 'productlist',
-        component: ProductListComponent
-
-    },
-    {
-        path: 'product/:id',
-        component: ProductComponent
-
-    },
-    {
         path: 'course',
         component: CourseComponent
 
@@ -283,21 +273,7 @@ const routes: Routes = [
 
 
     },
-    {
-        path: 'item',
-        component: ItemComponent
-
-    },
-    {
-        path: 'itemlist',
-        component: ItemlistComponent
-
-    },
-    {
-        path: 'item/:id',
-        component: ItemComponent
-
-    },
+    
 
 
 
