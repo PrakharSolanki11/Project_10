@@ -1,6 +1,7 @@
 com\rays\service\MarksheetServiceInt.class
 com\rays\service\ProductServiceInt.class
 com\rays\dao\CartDAOImpl.class
+com\rays\service\CustomerServiceInt.class
 com\rays\service\TimeTableServiceInt.class
 com\rays\dao\MarksheetDAOInt.class
 com\rays\ctl\ItemCtl.class
@@ -52,10 +53,12 @@ com\rays\service\CartServiceImpl.class
 com\rays\common\mail\EmailServiceImpl$1.class
 com\rays\config\SecurityConfig.class
 com\rays\ctl\CourseCtl.class
+com\rays\dto\CustomerDTO.class
 com\rays\dao\CartDAOInt.class
 com\rays\dto\CourseDTO.class
 com\rays\form\StudentForm.class
 com\rays\common\BaseServiceInt.class
+com\rays\ctl\CustomerCtl.class
 com\rays\ctl\SubjectCtl.class
 com\rays\dao\CollegeDAOInt.class
 com\rays\service\CollegeServiceImpl.class
@@ -63,6 +66,7 @@ com\rays\service\ProductServiceImpl.class
 com\rays\service\CourseServiceImpl.class
 com\rays\dao\FacultyDAOInt.class
 com\rays\common\ORSResponse.class
+com\rays\service\CustomerServiceImpl.class
 com\rays\service\StudentServiceImpl.class
 com\rays\common\BaseCtl.class
 com\rays\ctl\LoginCtl.class
@@ -87,6 +91,7 @@ com\rays\ctl\TimeTableCtl.class
 com\rays\dto\StudentDTO.class
 com\rays\service\TimeTableServiceImpl.class
 com\rays\common\DropdownList.class
+com\rays\dao\CustomerDAOInt.class
 com\rays\ProjectOrsApplication$1.class
 com\rays\dto\TimeTableDTO.class
 com\rays\dao\ProductDAOInt.class
@@ -108,6 +113,7 @@ com\rays\form\CartForm.class
 com\rays\form\MyProfileForm.class
 com\rays\ctl\CartCtl.class
 com\rays\dao\TimeTableDAOImpl.class
+com\rays\dao\CustomerDAOImpl.class
 com\rays\exception\DuplicateRecordException.class
 com\rays\common\BaseServiceImpl.class
 com\rays\common\UserContext.class
@@ -115,6 +121,7 @@ com\rays\dto\UserDTO.class
 com\rays\dto\CollegeDTO.class
 com\rays\form\ChangePasswordForm.class
 com\rays\form\ItemForm.class
+com\rays\form\CustomerForm.class
 com\rays\service\FacultyServiceInt.class
 com\rays\service\JWTUserDetailsService.class
 com\rays\common\MenuItem.class

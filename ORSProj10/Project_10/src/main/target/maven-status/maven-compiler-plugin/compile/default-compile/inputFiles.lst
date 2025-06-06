@@ -31,6 +31,7 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\CollegeServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\JasperServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\UserServiceImpl.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\CustomerServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CartDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\JasperServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\RoleDTO.java
@@ -48,6 +49,7 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\SubjectServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\message\MessageServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\TimeTableDAOInt.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CustomerDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\ChangePasswordForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\FacultyDAOInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\CourseForm.java
@@ -60,6 +62,7 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\CourseDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\DropdownList.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\CustomerForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\UserDAOImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\ItemDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CourseDAOInt.java
@@ -72,6 +75,7 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\TimeTableServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\TimeTableDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\ItemServiceImpl.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\CustomerServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\attachment\AttachmentServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseServiceImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\ProductDTO.java
@@ -100,6 +104,7 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\TimeTableDAOImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\StudentDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\CourseCtl.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\CustomerCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\SubjectServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\BaseForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\MarksheetDTO.java
@@ -122,7 +127,9 @@ D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\ray
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CollegeDAOImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\mail\EmailCtl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\ProductCtl.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dao\CustomerDAOImpl.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\common\mail\EmailServiceImpl.java
+D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\dto\CustomerDTO.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\service\ProductServiceInt.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\form\MarksheetForm.java
 D:\Rays Software\Workspace\Project_10\ORSProj10\Project_10\src\main\java\com\rays\ctl\FacultyCtl.java
